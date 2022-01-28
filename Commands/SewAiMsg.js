@@ -1,18 +1,18 @@
 /* 
 
-Sew Queen Whatsapp Bot                       
+ King-Queen Whatsapp Bot                       
 
-Telegram: https://t.me/RavinduManoj
-Facebook: https://www.facebook.com/ravindu.manoj.79
+Whatsapp:wa.me/94773585511
+
 Licensed under the  GPL-3.0 License;
 
-Coded By Ravindu Manoj
+Coded By Timasha(Black Shado)
 
 */ 
-let DataPack = require('sew-queen-pro');
-let SewQueen = require('sew-queen-pro/sources/dc/handler');
-let Details = require('sew-queen-pro/sources/dc/Details');
-let { MessageType, MessageOptions, Mimetype, GroupSettingChange, ChatModification } = require('@ravindu01manoj/sew-queen-web');
+let DataPack = require('king-queen-pro');
+let King-Queen = require('king-queen-pro/sources/dc/handler');
+let Details = require('king-queen-pro/sources/dc/Details');
+let { MessageType, MessageOptions, Mimetype, GroupSettingChange, ChatModification } = require('@Timasha');
 let fs = require('fs');
 let os = require('os');
 let ffmpeg = require('fluent-ffmpeg');
@@ -66,9 +66,9 @@ let convertToWav = file => {
         .save('output.wav')
 }
 SewQueen['IntroduceCMD']({on: 'text', fromMe: false, dontAdCommandList: true, delownsewcmd: false}, (async (message, input) => {
-    if ((message.message.startsWith('Sew') || message.message.startsWith('.bot')) && Details.SEW_AI !== 'true') {    
+    if ((message.message.startsWith('king') || message.message.startsWith('.bot')) && Details.KING_AI !== 'true') {    
         var unique_ident = message.client.user.jid.split('@')[0]      
-        var finm = message.message.replace('Sew', '').replace(' ', '').replace('.bot', '')   
+        var finm = message.message.replace('King', '').replace(' ', '').replace('.bot', '')   
         var trmsg = ''
             ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
             if ('text' in ceviri) {
@@ -87,9 +87,9 @@ SewQueen['IntroduceCMD']({on: 'text', fromMe: false, dontAdCommandList: true, de
         })
     }
 }));
-SewQueen['IntroduceCMD']({on: 'text', fromMe: false, delownsewcmd: false}, (async (message, input) => {
+ King-Queen['IntroduceCMD']({on: 'text', fromMe: false, delownsewcmd: false}, (async (message, input) => {
 if(message.message.startsWith(STP)) return;
-        if (Details.SEW_AI == 'true') {
+        if (Details.KING_AI == 'true') {
 		if (message.message.startsWith('.')) return;
             if (message.jid.includes('g.us') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
